@@ -1,0 +1,10 @@
+# pass these as commandline params to aws command, like $EU
+export EU="--region=eu"
+export OR="--region=us-west-2"
+export JP="--region=ap-northeast-1"
+export AP="--region=ap"
+
+alias ll="ls -lpt"
+alias l="ls -lp"
+alias be="bundle exec"
+alias ssh='ssh -A'
