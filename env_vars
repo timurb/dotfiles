@@ -4,8 +4,23 @@ unset LANGUAGE
 
 export EDITOR="vim"
 
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+export VAGRANT_DEFAULT_PROVIDER="aws"
+
 export GITHUB_USER="timurb"
 export GIT_AUTHOR_NAME="Timur Batyrshin"
 export GIT_COMMITTER_NAME="Timur Batyrshin"
 export GIT_AUTHOR_EMAIL="erthad@gmail.com"
 export GIT_COMMITTER_EMAIL="erthad@gmail.com"
+
+export CINARRA_UID="TimurB"
+
+# Set command prompt
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWCOLORHINTS=1
+
+PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\\$ "'

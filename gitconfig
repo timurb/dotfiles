@@ -1,9 +1,11 @@
+[push]
+        default = simple
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [user]
 	name = Timur Batyrshin
-	email = erthad@gmail.com
+	email = timur.batyrshin@cinarra.com
 [core]
 	excludesfile = /Users/timurb/.gitignore_global
 [difftool "sourcetree"]
