@@ -13,7 +13,7 @@ log_level     :info
 log_location  STDOUT
 cache_type    'BasicFile'
 cache_options ({ :path => "#{ENV['HOME']}/.chef/checksums" })
-cookbook_path ["#{ENV['HOME']}/src/cnr-chef/cookbooks"]
+cookbook_path ["#{ENV['HOME']}/cinarra/cnr-chef/cookbooks"]
 
 if node_name == "CHANGEME"
   raise "Edit your knife.rb and set 'node_name' to your username"

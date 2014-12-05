@@ -1,8 +1,9 @@
 [push]
         default = simple
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
 [user]
 	name = Timur Batyrshin
 	email = timur.batyrshin@cinarra.com

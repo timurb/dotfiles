@@ -12,3 +12,4 @@ alias l="ls -lp"
 alias be="bundle exec"
 alias ssh='ssh -A'
 alias gpff='git pull --ff-only'
+alias gst='git status'
