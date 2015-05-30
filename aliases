@@ -13,3 +13,9 @@ alias be="bundle exec"
 alias ssh='ssh -A'
 alias gpff='git pull --ff-only'
 alias gst='git status'
+
+alias vgs='vagrant global-status'
+
+alias resetdns='sudo discoveryutil udnsflushcaches'
+
+alias foodcritic='foodcritic ${FOODCRITIC_PARAMS}'

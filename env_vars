@@ -29,3 +29,6 @@ PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\\$ "'
 export PATH="/usr/local/sbin:$PATH"
 export GOPATH=$HOME/Documents/golang
 export PATH=$PATH:$GOPATH/bin
+
+export FOODCRITIC_RULES="${HOME}/.chef/foodcritic/etsy:${HOME}/.chef/foodcritic/customink:${HOME}/.chef/foodcritic/timurb" # used in foodcritic rake task
+export FOODCRITIC_PARAMS="-I ${HOME}/.chef/foodcritic/etsy -I ${HOME}/.chef/foodcritic/customink -I ${HOME}/.chef/foodcritic/timurb" # passed to foodcritic command
