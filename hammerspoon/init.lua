@@ -47,10 +47,20 @@ hotkey.bind({"cmd", "alt"}, "left", function ()
   local win = window.focusedWindow()
   local scr = win:screen():frame()
   local f = win:frame()
+
+  if (f.x ~= 0) or (f.w > scr.w / 2) then
+    f.w = math.floor(scr.w / 2)
+  elseif f.w > scr.w / 3 then
+    f.w = math.floor(scr.w / 3)
+  else
+    f.w = math.floor(scr.w / 4)
+  end
+
+  f.h = scr.h
+
   f.x = 0
   f.y = 0
-  f.w = scr.w / 2
-  f.h = scr.h
+
   win:setFrame(f)
 end)
 
@@ -58,9 +68,19 @@ hotkey.bind({"cmd", "alt"}, "right", function ()
   local win = window.focusedWindow()
   local scr = win:screen():frame()
   local f = win:frame()
-  f.x = scr.w / 2
+
+  if (f.x + f.w ~= scr.w) or (f.w > scr.w / 2) then   -- account for possible roundups
+    f.x = math.floor(scr.w / 2)
+    f.w = math.floor(scr.w / 2)
+  elseif f.w > scr.w / 3 then
+    f.x = scr.w - math.floor(scr.w / 3)
+    f.w = math.floor(scr.w / 3)
+  else
+    f.x = scr.w - math.floor(scr.w / 4)
+    f.w = math.floor(scr.w / 4)
+  end
+
   f.y = 0
-  f.w = scr.w / 2
   f.h = scr.h
   win:setFrame(f)
 end)
