@@ -7,8 +7,6 @@ export EDITOR="vim"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-export VAGRANT_DEFAULT_PROVIDER="aws"
-
 export GITHUB_USER="timurb"
 export GIT_AUTHOR_NAME="Timur Batyrshin"
 export GIT_COMMITTER_NAME="Timur Batyrshin"
@@ -32,3 +30,5 @@ export PATH=$PATH:$GOPATH/bin
 
 export FOODCRITIC_RULES="${HOME}/.chef/foodcritic/etsy:${HOME}/.chef/foodcritic/customink:${HOME}/.chef/foodcritic/timurb" # used in foodcritic rake task
 export FOODCRITIC_PARAMS="-I ${HOME}/.chef/foodcritic/etsy -I ${HOME}/.chef/foodcritic/customink -I ${HOME}/.chef/foodcritic/timurb" # passed to foodcritic command
+
+export ATLAS_USERNAME=timurb
