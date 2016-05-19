@@ -13,9 +13,6 @@ export GIT_COMMITTER_NAME="Timur Batyrshin"
 export GIT_AUTHOR_EMAIL="erthad@gmail.com"
 export GIT_COMMITTER_EMAIL="erthad@gmail.com"
 
-export CINARRA_UID="TimurB"
-export CINARRA_KEY="${HOME}/.ssh/engg-qa.pem"
-
 # Set command prompt
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
