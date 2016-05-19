@@ -13,6 +13,7 @@ alias be="bundle exec"
 alias ssh='ssh -A'
 alias gpff='git pull --ff-only'
 alias gst='git status'
+alias kitchen='be kitchen'
 
 alias vgs='vagrant global-status'
 alias vst='vagrant status'

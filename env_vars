@@ -32,3 +32,4 @@ export FOODCRITIC_RULES="${HOME}/.chef/foodcritic/etsy:${HOME}/.chef/foodcritic/
 export FOODCRITIC_PARAMS="-I ${HOME}/.chef/foodcritic/etsy -I ${HOME}/.chef/foodcritic/customink -I ${HOME}/.chef/foodcritic/timurb" # passed to foodcritic command
 
 export ATLAS_USERNAME=timurb
+export BECOME="--become --ask-become-pass"
