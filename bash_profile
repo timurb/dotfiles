@@ -15,3 +15,5 @@ fi
 eval "$(direnv hook bash)"
 
 export HISTFILESIZE=10000000000
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
