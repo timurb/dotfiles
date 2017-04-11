@@ -1,20 +1,19 @@
+# See http://docs.chef.io/config_rb_knife.html for more information on knife configuration options
+
 current_dir = File.dirname(__FILE__)
 
-# Set the node name to your Opscode account name
-node_name              "timurb"
-
-# Optionally change these
-client_key      ENV['CHEF_KEY'] || "#{current_dir}/client.pem"             # Path to workstation key
-validation_key  ENV['CHEF_VALIDATION'] || "#{current_dir}/validation.pem"  # Path to validation key
-chef_server_url ENV['CHEF_SERVER'] || "https://chef.test.cinarra.com/"     # Chef server API endpoint for our organization
-
-# You generally don't need to edit the below params
-log_level     :info
-log_location  STDOUT
-cache_type    'BasicFile'
-cache_options ({ :path => "#{ENV['HOME']}/.chef/checksums" })
-cookbook_path ["#{ENV['HOME']}/cinarra/cnr-chef/cookbooks"]
-
-if node_name == "CHANGEME"
-  raise "Edit your knife.rb and set 'node_name' to your username"
+#
+# Define chef params these using ENV vars
+# Use of http://direnv.net is recommended to dynamically set these
+#
+%w(CHEF_NODE_NAME CHEF_CLIENT_KEY CHEF_SERVER_URL CHEF_COOKBOOKS_PATH).each do |var|
+  raise "ENV['#{var}'] is not defined" unless ENV[var]
 end
+
+node_name                ENV['CHEF_NODE_NAME']
+client_key               ENV['CHEF_CLIENT_KEY']
+chef_server_url          ENV['CHEF_SERVER_URL']
+cookbook_path            ENV['CHEF_COOKBOOKS_PATH']
+
+log_level                :info
+log_location             STDOUT
