@@ -23,3 +23,6 @@ alias resetdns='sudo discoveryutil udnsflushcaches'
 alias foodcritic='foodcritic ${FOODCRITIC_PARAMS}'
 
 alias chef-init='eval "$(chef shell-init bash)"'
+
+alias clean-docker-containers='docker rm --volumes $(docker ps --all --quiet --filter status=exited)'
+alias clean-docker-images='docker rmi $(docker images --filter "dangling=true" --quiet)'
