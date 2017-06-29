@@ -10,6 +10,8 @@ alias grep='grep --color=auto'
 alias ll="ls -lpt"
 alias l="ls -lp"
 alias be="bundle exec"
+alias cebe="chef exec bundle exec"
+alias cebi="chef exec bundle install"
 alias ssh='ssh -A'
 alias gpff='git pull --ff-only'
 alias gst='git status'
