@@ -33,3 +33,5 @@ export LOLCOMMITS_FORK=1
 
 export HISTFILESIZE=1000000000000
 
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"

@@ -1,6 +1,10 @@
 eval $(lesspipe.sh)
 eval "$(direnv hook bash)"
-[ -f ~/.fzf.bash ] && . ~/.fzf.bash
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+if [ -f "${HOME}/github/fzf-obc/bin/fzf-obc.bash" ]; then
+ . "${HOME}/github/fzf-obc/bin/fzf-obc.bash"
+elif [ -f ~/.fzf.bash ]; then
+ . ~/.fzf.bash
+fi
