@@ -45,4 +45,3 @@ alias krs='knife role show'
 alias kee='knife environment edit'
 
 alias klf='kubectl logs -f'
-alias kubectl='kubectl $NAMESPACE'
