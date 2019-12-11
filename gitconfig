@@ -6,12 +6,18 @@
 	required = true
 [user]
 	name = Timur Batyrshin
-	email = timur@whitespectre.com
+	email = erthad@gmail.com
 [core]
 	excludesfile = /Users/timurb/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[svn]
+	rmdir = true
+[commit]
+	template = /Users/timurb/.stCommitMsg
+[credential]
+	helper = cache --timeout 604800

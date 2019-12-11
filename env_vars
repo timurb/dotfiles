@@ -25,3 +25,8 @@ export PATH="/usr/local/sbin:$PATH"
 
 export ATLAS_USERNAME=timurb
 export BECOME="--become --ask-become-pass"
+
+export KITCHEN_PRIVILEGED=1
+
+export LOLCOMMITS_DELAY=1
+export LOLCOMMITS_FORK=1
