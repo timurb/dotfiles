@@ -5,6 +5,7 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 
 if [ -f "${HOME}/github/fzf-obc/bin/fzf-obc.bash" ]; then
  . "${HOME}/github/fzf-obc/bin/fzf-obc.bash"
+ . "/usr/local/opt/fzf/shell/key-bindings.bash"
 elif [ -f ~/.fzf.bash ]; then
  . ~/.fzf.bash
 fi
