@@ -7,3 +7,8 @@ use_ruby() {
   load_prefix $ruby_dir
   layout ruby
 }
+
+assume_profile() {
+  export AWS_PROFILE=$1
+  echo "========> Using AWS profile: $1 <========"
+}

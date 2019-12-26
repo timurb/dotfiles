@@ -45,3 +45,8 @@ alias krs='knife role show'
 alias kee='knife environment edit'
 
 alias klf='kubectl logs -f'
+
+assume_profile() {
+  export AWS_PROFILE=$1
+  echo "========> Using AWS profile: $1 <========"
+}
