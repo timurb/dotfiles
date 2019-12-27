@@ -50,3 +50,5 @@ assume_profile() {
   export AWS_PROFILE=$1
   echo "========> Using AWS profile: $1 <========"
 }
+
+alias av="aws-vault exec \$AWS_PROFILE"
