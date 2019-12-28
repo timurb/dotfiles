@@ -52,3 +52,10 @@ assume_profile() {
 }
 
 alias av="aws-vault exec \$AWS_PROFILE"
+
+terraform() {
+  local CMD
+  which terraform >&2 # debug
+  [ -n "${AWS_PROFILE}" ] && CMD="aws-vault exec $AWS_PROFILE --"
+  $CMD $(which terraform) $*
+}
