@@ -12,7 +12,6 @@ alias l="ls -lp"
 alias be="bundle exec"
 alias cebe="chef exec bundle exec"
 alias cebi="chef exec bundle install"
-alias ssh='ssh -A'
 alias gpff='git pull --ff-only'
 alias gst='git status'
 alias gcv='git commit --verbose'
@@ -46,16 +45,31 @@ alias kee='knife environment edit'
 
 alias klf='kubectl logs -f'
 
+alias av="aws-vault exec --duration=12h \$AWS_PROFILE --"
+alias avn="aws-vault exec --duration=12h  \$AWS_PROFILE -n --"
+alias avx="aws-vault exec --duration=12h \$AWS_PROFILE"
+alias aws-login="aws-vault login --duration=12h \$AWS_PROFILE"
+
 assume_profile() {
   export AWS_PROFILE=$1
   echo "========> Using AWS profile: $1 <========"
 }
 
-alias av="aws-vault exec \$AWS_PROFILE"
-
 terraform() {
   local CMD
   which terraform >&2 # debug
-  [ -n "${AWS_PROFILE}" ] && CMD="aws-vault exec $AWS_PROFILE --"
+  [ -n "${AWS_PROFILE}" ] \
+    && echo "${AWS_PROFILE}" | grep -vq ^AWS.AD \
+    && CMD="aws-vault exec --duration=12h $AWS_PROFILE --"
   $CMD $(which terraform) $*
 }
+
+terragrunt() {
+  local CMD
+  which terragrunt >&2 # debug
+  [ -n "${AWS_PROFILE}" ] \
+    && echo "${AWS_PROFILE}" | grep -vq ^AWS.AD \
+    && CMD="aws-vault exec --duration=12h $AWS_PROFILE --"
+  $CMD $(which terragrunt) $*
+}
+
