@@ -6,3 +6,9 @@ if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
 fi
 
 . <(eksctl completion bash)
+
+complete -C /usr/local/bin/vault vault
+
+# The next line enables shell command completion for yc.
+if [ -f '/Users/timurb/yandex-cloud/completion.bash.inc' ]; then . '/Users/timurb/yandex-cloud/completion.bash.inc'; fi
+
