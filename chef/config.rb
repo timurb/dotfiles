@@ -46,3 +46,5 @@ end
 
 log_level                :info
 log_location             STDOUT
+
+knife[:ssh_user] = ENV['KNIFE_SSH_USER'] || 'tbatyrshin'
