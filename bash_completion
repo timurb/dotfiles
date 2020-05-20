@@ -9,6 +9,8 @@ fi
 
 complete -C /usr/local/bin/vault vault
 
+eval "$(aws-vault --completion-script-bash)"
+
 # The next line enables shell command completion for yc.
 if [ -f '/Users/timurb/yandex-cloud/completion.bash.inc' ]; then . '/Users/timurb/yandex-cloud/completion.bash.inc'; fi
 
