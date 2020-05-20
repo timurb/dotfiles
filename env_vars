@@ -41,6 +41,8 @@ export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 
 export TF_PLUGIN_CACHE_DIR="${HOME}/.terraform.d/plugin-cache"
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # The next line updates PATH for Yandex Cloud CLI.
 if [ -f '/Users/timurb/yandex-cloud/path.bash.inc' ]; then . '/Users/timurb/yandex-cloud/path.bash.inc'; fi
 
