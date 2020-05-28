@@ -54,22 +54,3 @@ assume_profile() {
   export AWS_PROFILE=$1
   echo "========> Using AWS profile: $1 <========"
 }
-
-terraform() {
-  local CMD
-  which terraform >&2 # debug
-  [ -n "${AWS_PROFILE}" ] \
-    && echo "${AWS_PROFILE}" | grep -vq ^AWS.AD \
-    && CMD="aws-vault exec --duration=12h $AWS_PROFILE --"
-  $CMD $(which terraform) $*
-}
-
-terragrunt() {
-  local CMD
-  which terragrunt >&2 # debug
-  [ -n "${AWS_PROFILE}" ] \
-    && echo "${AWS_PROFILE}" | grep -vq ^AWS.AD \
-    && CMD="aws-vault exec --duration=12h $AWS_PROFILE --"
-  $CMD $(which terragrunt) $*
-}
-
