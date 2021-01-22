@@ -17,3 +17,5 @@ echo "Loading bash integrations"
 # . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 
 echo ...
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

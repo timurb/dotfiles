@@ -54,3 +54,5 @@ assume_profile() {
   export AWS_PROFILE=$1
   echo "========> Using AWS profile: $1 <========"
 }
+
+alias enable-sdkman="[[ -s \"${HOME}/.sdkman/bin/sdkman-init.sh\" ]] && . \"${HOME}/.sdkman/bin/sdkman-init.sh\""
