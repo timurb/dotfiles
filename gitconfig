@@ -6,7 +6,7 @@
 	required = true
 [user]
 	name = Timur Batyrshin
-	email = erthad@gmail.com
+	email = tbatyrshin@express42.com
 [core]
 	excludesfile = /Users/timurb/.gitignore_global
 [difftool "sourcetree"]
