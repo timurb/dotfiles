@@ -9,3 +9,5 @@ if [ -f "${HOME}/github/fzf-obc/bin/fzf-obc.bash" ]; then
 elif [ -f ~/.fzf.bash ]; then
  . ~/.fzf.bash
 fi
+
+. "$HOME/.cargo/env"
