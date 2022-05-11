@@ -10,4 +10,4 @@ elif [ -f ~/.fzf.bash ]; then
  . ~/.fzf.bash
 fi
 
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
