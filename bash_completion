@@ -9,7 +9,7 @@ fi
 
 complete -C /usr/local/bin/vault vault
 
-eval "$(aws-vault --completion-script-bash)"
+#eval "$(aws-vault --completion-script-bash)"
 
 # The next line updates PATH for Yandex Cloud CLI.
 if [ -f '/Users/timurb/yandex-cloud/path.bash.inc' ]; then . '/Users/timurb/yandex-cloud/path.bash.inc'; fi
