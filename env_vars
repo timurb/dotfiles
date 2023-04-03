@@ -61,4 +61,4 @@ if [ -f '/Users/timurb/yandex-cloud/path.bash.inc' ]; then . '/Users/timurb/yand
 export AWS_SDK_LOAD_CONFIG=1
 export SDKMAN_DIR="${HOME}/.sdkman"
 
-
+export YC_TOKEN="$(yc iam create-token)"
