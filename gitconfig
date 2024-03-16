@@ -17,7 +17,5 @@
 	trustExitCode = true
 [svn]
 	rmdir = true
-[commit]
-	template = /Users/timurb/.stCommitMsg
 [credential]
 	helper = cache --timeout 604800

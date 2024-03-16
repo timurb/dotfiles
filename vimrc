@@ -6,6 +6,5 @@ endif
 " turn on this option as well
 set background=light
 
-set background=light
 set showmatch
 set modeline
