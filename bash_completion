@@ -1,15 +1,21 @@
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
     source `brew --prefix`/etc/bash_completion.d/vagrant
 fi
 
-. <(eksctl completion bash)
-
-complete -C /usr/local/bin/vault vault
-
+#complete -C /usr/local/bin/vault vault
 #eval "$(aws-vault --completion-script-bash)"
+#. <(eksctl completion bash)
+#. <(kubectl completion bash)
+
+# don't know why the completions are not sourced automatically
+
+for x in git-completion.bash git-prompt.sh brew kubectl tig-completion.bash yt-dlp; do
+  [ -f /opt/homebrew/etc/bash_completion.d/$x ] && . /opt/homebrew/etc/bash_completion.d/$x
+done
 
 # The next line updates PATH for Yandex Cloud CLI.
 if [ -f '/Users/timurb/yandex-cloud/path.bash.inc' ]; then . '/Users/timurb/yandex-cloud/path.bash.inc'; fi
@@ -17,4 +23,4 @@ if [ -f '/Users/timurb/yandex-cloud/path.bash.inc' ]; then . '/Users/timurb/yand
 # The next line enables shell command completion for yc.
 if [ -f '/Users/timurb/yandex-cloud/completion.bash.inc' ]; then . '/Users/timurb/yandex-cloud/completion.bash.inc'; fi
 
-. <(kubectl completion bash)
+
