@@ -1,50 +1,4 @@
-# pass these as commandline params to aws command, like $EU
-export EU="--region=eu"
-export OR="--region=us-west-2"
-export JP="--region=ap-northeast-1"
-export AP="--region=ap"
-
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
-alias ll="ls -lpt"
-alias l="ls -lp"
-alias be="bundle exec"
-alias cebe="chef exec bundle exec"
-alias cebi="chef exec bundle install"
-alias gpff='git pull --ff-only --prune'
-alias gst='git status'
-alias gcv='git commit --verbose'
-alias kitchen='be kitchen'
-
-alias vgs='vagrant global-status'
-alias vst='vagrant status'
-
-alias resetdns='sudo discoveryutil udnsflushcaches'
-
-alias foodcritic='foodcritic ${FOODCRITIC_PARAMS}'
-
-alias chef-init='eval "$(chef shell-init bash)"'
-
-alias clean-docker-containers='docker rm --volumes $(docker ps --all --quiet --filter status=exited)'
-alias clean-docker-images='docker rmi $(docker images --filter "dangling=true" --quiet)'
-
-alias spork='knife spork'
-
-alias lh='ls -lpt | head'
-
-alias drun='docker run -it'
-alias dexec='docker exec -it'
-
-alias filter_names="awk -F: '{print \$1}' | grep -v name | egrep -v '^\$' | sort -u"
-
-alias ksn='knife search node'
-alias kns='knife node show'
-alias krs='knife role show'
-alias kee='knife environment edit'
-
-alias klf='kubectl logs -f'
-
+#### AWS-related aliases
 alias av="aws-vault exec --duration=12h \$AWS_PROFILE --"
 alias avn="aws-vault exec --duration=12h  \$AWS_PROFILE -n --"
 alias avx="aws-vault exec --duration=12h \$AWS_PROFILE"
@@ -54,5 +8,50 @@ assume_profile() {
   export AWS_PROFILE=$1
   echo "========> Using AWS profile: $1 <========"
 }
+
+# pass these as commandline params to aws command, like $EU
+export EU="--region=eu"
+export OR="--region=us-west-2"
+export JP="--region=ap-northeast-1"
+export AP="--region=ap"
+
+#### Chef-related aliases
+#alias be="bundle exec"
+#alias cebe="chef exec bundle exec"
+#alias cebi="chef exec bundle install"
+#alias foodcritic='foodcritic ${FOODCRITIC_PARAMS}'
+#alias chef-init='eval "$(chef shell-init bash)"'
+#alias spork='knife spork'
+#alias ksn='knife search node'
+#alias kns='knife node show'
+#alias krs='knife role show'
+#alias kee='knife environment edit'
+#alias kitchen='be kitchen'
+
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+
+alias ll="ls -lpt"
+alias l="ls -lp"
+alias lh='ls -lpt | head'
+
+alias gpff='git pull --ff-only --prune'
+alias gst='git status'
+alias gcv='git commit --verbose'
+
+alias vgs='vagrant global-status'
+alias vst='vagrant status'
+
+alias resetdns='sudo discoveryutil udnsflushcaches'
+
+alias clean-docker-containers='docker rm --volumes $(docker ps --all --quiet --filter status=exited)'
+alias clean-docker-images='docker rmi $(docker images --filter "dangling=true" --quiet)'
+alias drun='docker run -it'
+alias dexec='docker exec -it'
+
+alias filter_names="awk -F: '{print \$1}' | grep -v name | egrep -v '^\$' | sort -u"
+
+alias klf='kubectl logs -f'
 
 alias enable-sdkman="[[ -s \"${HOME}/.sdkman/bin/sdkman-init.sh\" ]] && . \"${HOME}/.sdkman/bin/sdkman-init.sh\""
