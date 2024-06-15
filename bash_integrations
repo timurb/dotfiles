@@ -14,4 +14,8 @@ fi
 
 [ -f "$HOME/.sdkman/bin/sdkman-init.sh" ] && . "$HOME/.sdkman/bin/sdkman-init.sh" 
 
-frum -V && eval "$(frum init)"
+### frum -V && eval "$(frum init)"
+
+[ -f /opt/homebrew/opt/chruby/share/chruby/chruby.sh ] && . /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+[ -f /opt/homebrew/opt/chruby/share/chruby/auto.sh ] && . /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.3.3
