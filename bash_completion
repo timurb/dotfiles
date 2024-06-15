@@ -13,7 +13,7 @@ fi
 
 # don't know why the completions are not sourced automatically
 
-for x in git-completion.bash git-prompt.sh brew kubectl tig-completion.bash yt-dlp; do
+for x in git-completion.bash git-prompt.sh brew kubectl tig-completion.bash yt-dlp frum; do
   [ -f /opt/homebrew/etc/bash_completion.d/$x ] && . /opt/homebrew/etc/bash_completion.d/$x
 done
 
