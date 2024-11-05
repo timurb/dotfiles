@@ -18,9 +18,9 @@ for x in git-completion.bash git-prompt.sh brew kubectl tig-completion.bash yt-d
 done
 
 # The next line updates PATH for Yandex Cloud CLI.
-if [ -f '/Users/timurb/yandex-cloud/path.bash.inc' ]; then . '/Users/timurb/yandex-cloud/path.bash.inc'; fi
+if [ -f "${HOME}/yandex-cloud/path.bash.inc" ]; then . "${HOME}/yandex-cloud/path.bash.inc" ; fi
 
 # The next line enables shell command completion for yc.
-if [ -f '/Users/timurb/yandex-cloud/completion.bash.inc' ]; then . '/Users/timurb/yandex-cloud/completion.bash.inc'; fi
+if [ -f "${HOME}/yandex-cloud/completion.bash.inc" ]; then . "${HOME}/yandex-cloud/completion.bash.inc" ; fi
 
 
