@@ -56,11 +56,12 @@ export LESSOPEN="|/opt/homebrew/bin/lesspipe.sh %s"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # The next line updates PATH for Yandex Cloud CLI.
-if [ -f '/Users/timurb/yandex-cloud/path.bash.inc' ]; then . '/Users/timurb/yandex-cloud/path.bash.inc'; fi
+if [ -f "${HOME}/yandex-cloud/path.bash.inc" ]; then . "${HOME}/yandex-cloud/path.bash.inc"; fi
 
 export AWS_SDK_LOAD_CONFIG=1
 export SDKMAN_DIR="${HOME}/.sdkman"
 
-export YC_TOKEN="$(yc iam create-token)"
+# isn't too handy with various 2FA stuff unless that's your main tool
+#export YC_TOKEN="$(yc iam create-token)"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
