@@ -23,4 +23,5 @@ if [ -f "${HOME}/yandex-cloud/path.bash.inc" ]; then . "${HOME}/yandex-cloud/pat
 # The next line enables shell command completion for yc.
 if [ -f "${HOME}/yandex-cloud/completion.bash.inc" ]; then . "${HOME}/yandex-cloud/completion.bash.inc" ; fi
 
-
+# PDD CLI completion
+[ -f "${HOME}/.local/share/uv/tools/pdd-cli/lib/python3.13/site-packages/pdd/pdd_completion.sh" ] && . "${HOME}/.local/share/uv/tools/pdd-cli/lib/python3.13/site-packages/pdd/pdd_completion.sh" 

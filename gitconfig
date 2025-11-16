@@ -6,7 +6,7 @@
 	required = true
 [user]
 	name = Timur Batyrshin
-	email = timurb@hey.com
+	email = erthad@gmail.com
 [core]
 	excludesfile = /Users/timurb/.gitignore_global
 [difftool "sourcetree"]
@@ -21,3 +21,5 @@
 	helper = cache --timeout 604800
 [init]
 	defaultBranch = master
+[pull]
+	ff = only
