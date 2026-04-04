@@ -16,3 +16,4 @@ echo "Loading bash integrations"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/${HOME}/.sdkman"
 [[ -s "/Users/${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/${HOME}/.sdkman/bin/sdkman-init.sh"
+

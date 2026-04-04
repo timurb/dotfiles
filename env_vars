@@ -19,9 +19,10 @@ GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWCOLORHINTS=1
 
-PROMPT_COMMAND='__git_ps1 "\u@\h|\[\e[7;36m\]\$AWS_PROFILE:\[\e[1;36m\]\$TF_VAR_aws_profile\[\e[0m\]:\W" " \\\$ "'
+PS1='\u@\h|\[\e[7;36m\]${AWS_PROFILE}\[\e[0m\]:\[\e[1;36m\]${TF_VAR_aws_profile}\[\e[0m\]:\W$(__git_ps1 " (%s)") \$ '
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:${HOME}/.local/bin:${HOME}/bin:$PATH"
+export PATH="$PATH:${HOME}/.lmstudio/bin"
 
 export ATLAS_USERNAME=timurb
 export BECOME="--become --ask-become-pass"
