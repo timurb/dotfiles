@@ -55,3 +55,4 @@ alias filter_names="awk -F: '{print \$1}' | grep -v name | egrep -v '^\$' | sort
 alias klf='kubectl logs -f'
 
 alias enable-sdkman="[[ -s \"${HOME}/.sdkman/bin/sdkman-init.sh\" ]] && . \"${HOME}/.sdkman/bin/sdkman-init.sh\""
+alias repomix="docker run -v .:/app -it --rm ghcr.io/yamadashy/repomix"
